@@ -210,3 +210,77 @@
 ![Praktikum 7.2](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 8 – Navigation route dengan Future Function
+
+### 💡 Soal 1  
+**Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.**
+
+**🧠 Jawaban:**  
+```     
+Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(title: const Text('Navigation First Screen - Ammar')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Change Color'),
+          onPressed: () {
+            _navigateAndGetColor(context);
+          },
+        ),
+      ),
+    );
+  }
+
+```
+
+### 💡 Soal 2  
+**Silakan ganti dengan warna tema favorit Anda.**
+
+**🧠 Jawaban:**  
+```    
+class _NavigationFirstState extends     State<NavigationFirst> {
+  Color color = const Color.fromARGB(255, 159, 57, 255);
+
+```
+
+### 💡 Soal 3  
+**Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?**
+
+**🧠 Jawaban:**  
+   warna screen (background) akan berubah sesuai warna yang dipilih dan yang telah disediakan
+
+### 💡 Soal 4  
+**Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!**
+
+**🧠 Jawaban:**  
+```    
+ElevatedButton(
+              child: const Text('Green'),
+              onPressed: () {
+                color = const Color.fromARGB(255, 140, 217, 25);
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Blue'),
+              onPressed: () {
+                color = const Color.fromARGB(255, 67, 8, 229);
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Red'),
+              onPressed: () {
+                color = const Color.fromARGB(255, 180, 15, 15);
+                Navigator.pop(context, color);
+              },
+            ),
+
+```
+
+### ✅ Bukti Praktikum 8
+![Praktikum 8](lib/assets/images/prak1.gif)
+
+---
