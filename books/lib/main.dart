@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,6 +74,19 @@ class _FuturePageState extends State<FuturePage> {
     return 3;
   }
 
+  void returnFG() {
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+    futures.then((value) {
+      setState(() {
+        result = value.toString();
+      });
+    });
+  }
+
   Future count() async {
     int total = 0;
     total += await returnOneAsync();
@@ -86,7 +100,7 @@ class _FuturePageState extends State<FuturePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Back from the Future')),
+      appBar: AppBar(title: const Text('Back from the Future - Ammar')),
       body: Center(
         child: Column(
           children: [
@@ -95,15 +109,17 @@ class _FuturePageState extends State<FuturePage> {
               child: const Text('GO!'),
               onPressed: () {
                 // count();
-                getNumber()
-                    .then((value) {
-                      setState(() {
-                        result = value.toString();
-                      });
-                    })
-                    .catchError((e) {
-                      result = 'An error occurred';
-                    });
+                //   getNumber()
+                //       .then((value) {
+                //         setState(() {
+                //           result = value.toString();
+                //         });
+                //       })
+                //       .catchError((e) {
+                //         result = 'An error occurred';
+                //       });
+                // },
+                returnFG();
               },
             ),
             const Spacer(),

@@ -117,3 +117,23 @@
 ![Praktikum 3](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 4 – Memanggil Future secara paralel
+
+### 💡 Soal 1  
+**Jelaskan maksud perbedaan kode langkah 1 dan 4!**
+
+**🧠 Jawaban:**  
+
+- **`FutureGroup`**  
+   Future group dipakai ketika kita ingin menambah future secara dinamis sebelum close dipanggil 
+
+- **`Future.wait`**  
+   Semua future dijalankan secara pararel atau semua method langsung berjalan bersamaan 
+
+---
+
+### ✅ Bukti Praktikum 4
+![Praktikum 3.4](lib/assets/images/prak1.gif)
+
+---
