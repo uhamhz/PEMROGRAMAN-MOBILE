@@ -107,4 +107,13 @@
 ### ✅ Bukti Praktikum 3 Langkah 4
 ![Praktikum 3.4](lib/assets/images/prak1.gif)
 
+### 💡 Soal 2  
+**Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!**
+
+**🧠 Jawaban:**  
+   logika method masih sama saja tetapi pada method yang sudah diperbarui memiliki try catch error yang dapat menampilkan pesan saat ada error 
+
+### ✅ Bukti Praktikum 3
+![Praktikum 3](lib/assets/images/prak1.gif)
+
 ---
