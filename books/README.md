@@ -87,3 +87,24 @@
 ![Praktikum 2](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 3 – Menggunakan Completer di Future
+
+### 💡 Soal 1  
+**Jelaskan maksud kode langkah 2 tersebut!**
+
+**🧠 Jawaban:**  
+
+- **`getNumber`**  
+   getNumber() langsung mengembalikan Future yang belum selesai.
+   Tapi 5 detik kemudian, Future itu akan selesai dan memberikan nilai 42.
+
+- **`calculate`**  
+   Future yang dikembalikan oleh getNumber() sekarang dianggap selesai (completed), dengan hasil nilai 42.
+
+---
+
+### ✅ Bukti Praktikum 3 Langkah 4
+![Praktikum 3.4](lib/assets/images/prak1.gif)
+
+---
