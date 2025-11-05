@@ -26,7 +26,7 @@
 ```
 ---
 
-### 💡 Soal 2  
+### 💡 Soal 2.1  
 **Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabel path di kode tersebut. Caranya ambil di URL browser Anda seperti gambar berikut ini.**
 
 **🧠 Jawaban:**  
@@ -48,20 +48,18 @@
 
 ---
 
-### 💡 Soal 4  
-**Apa kegunaan method pada Langkah 11 dan 13 dalam lifecycle state?**
+### 💡 Soal 3  
+**Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!**
 
 **🧠 Jawaban:**  
 
-- **`initState()`**  
-  Merupakan tahap pertama saat `State` baru dibuat.  
-  Method ini dipanggil **sekali saja** sebelum widget pertama kali ditampilkan.  
-  Biasanya digunakan untuk inisialisasi data atau proses awal.
+- **`substring`**  
+  .substring(0, 450) → memotong teks tersebut mulai dari indeks ke-0 sampai ke-449, jadi hanya menampilkan 450 karakter pertama. Agar data yang ditampilkan ke layar tidak terlalu panjang (karena response JSON bisa sangat besar).
+ Misalnya, kalau body berisi 10.000 karakter, hanya 450 karakter pertama yang diambil untuk pratinjau cepat.
 
-- **`dispose()`**  
-  Adalah tahap terakhir dari lifecycle widget.  
-  Method ini dipanggil ketika widget **dihapus dari widget tree**, misalnya saat pindah halaman.  
-  Fungsinya untuk membersihkan resource, seperti controller atau listener.
+- **`catchError`**  
+  Menampilkan pesan 'An error occurred' agar pengguna tahu bahwa ada kegagalan saat memuat data.
+ Pemanggilan setState() memastikan teks hasil (result) yang ditampilkan di UI ikut diperbarui.
 
 ---
 
