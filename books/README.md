@@ -157,3 +157,34 @@
 ![Praktikum 5](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 6 – Menggunakan Future dengan StatefulWidget
+
+### 💡 Soal 1  
+**Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.**
+
+**🧠 Jawaban:**  
+```    Widget build(BuildContext context) {
+    final myWidget = myPosition == ''
+        ? const CircularProgressIndicator()
+        : Text(myPosition);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location - Ammar')),
+      body: Center(child: myWidget),
+    );
+  }
+
+```
+### 💡 Soal 2
+**Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?**
+
+**🧠 Jawaban:**  
+   Tetap mendapatkan kordinat GPS seperti di emulator karena web mengirimkan izin membagikan lokasi terkini terlebih dahulu dan lokasi baru ditampilkan dan terlebih ini flutter 1 code bisa dijalankan di berbagai platform
+
+---
+
+### ✅ Bukti Praktikum 6
+![Praktikum 6](lib/assets/images/prak1.gif)
+
+---
