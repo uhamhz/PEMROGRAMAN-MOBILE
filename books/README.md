@@ -200,4 +200,13 @@
 ### ✅ Bukti Praktikum 7.1
 ![Praktikum 7.1](lib/assets/images/prak1.gif)
 
+### 💡 Soal 2  
+**Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?**
+
+**🧠 Jawaban:**  
+  Perbedaan UI hanya pada handle error saja sekarang menampilkan pesan ke aplikasi bukan null saja
+
+### ✅ Bukti Praktikum 7.2
+![Praktikum 7.2](lib/assets/images/prak1.gif)
+
 ---
