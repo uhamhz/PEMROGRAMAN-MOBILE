@@ -67,3 +67,23 @@
 ![Praktikum 1](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 2 – Menggunakan await/async untuk menghindari callbacks
+
+### 💡 Soal 1  
+**Jelaskan maksud kode langkah 1 dan 2 tersebut!**
+
+**🧠 Jawaban:**  
+
+- **`Langkah Pertama`**  
+   Pada langkah pertama kita membuat tiga method asyncronus dan tiap method memiliki delay 3 detik tetapi memiliki nilai return yang berbeda beda 1,2 dan 3
+
+- **`Langkah Kedua`**  
+   dan pada method count yang akan dipanggil saat user menekan tombol go dan pada method count dimulai dari var total yaitu 0 dan menunggu tiap method async return 1 2 3 terpanggil dengan waktu delay 9 detik dan nilai returnnya 6 yang akan ditampilkan pada ui 
+
+---
+
+### ✅ Bukti Praktikum 2  
+![Praktikum 2](lib/assets/images/prak1.gif)
+
+---
