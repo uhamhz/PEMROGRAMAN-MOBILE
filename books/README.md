@@ -188,3 +188,16 @@
 ![Praktikum 6](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 7 – Manajemen Future dengan FutureBuilder
+
+### 💡 Soal 1  
+**Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?**
+
+**🧠 Jawaban:**  
+  tidak ada perbedaan UI namun hasil UI saja yang berbeda seperti yang sebelumnya loading lebih cepat sekarang 3 detik (lebih lama) dan sekarang position null tidak ada titik kordinat
+
+### ✅ Bukti Praktikum 7.1
+![Praktikum 7.1](lib/assets/images/prak1.gif)
+
+---
