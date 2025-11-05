@@ -284,3 +284,45 @@ ElevatedButton(
 ![Praktikum 8](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 9 – Memanfaatkan async/await dengan Widget Dialog
+
+### 💡 Soal 1  
+**Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?**
+
+**🧠 Jawaban:**  
+  Masih ada error ui atau background tidak berganti warna dikarenakan variabel state tidak diperbarui meskipun memanggil setState({}) di akhir fungsi _showColorDialog, tidak memberi tahu setState nilai baru apa yang harus digunakan. variabel state color (this.color) tetap menggunakan nilai lamanya.
+
+### 💡 Soal 2  
+**Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!**
+
+**🧠 Jawaban:**  
+``` 
+  TextButton(
+              child: const Text('Pink'),
+              onPressed: () {
+                final selectedColor = const Color.fromARGB(255, 215, 48, 227);
+                Navigator.pop(context, selectedColor);
+              },
+            ),
+            TextButton(
+              child: const Text('Green'),
+              onPressed: () {
+                final selectedColor = const Color.fromARGB(255, 0, 128, 0);
+                Navigator.pop(context, selectedColor);
+              },
+            ),
+            TextButton(
+              child: const Text('Black'),
+              onPressed: () {
+                final selectedColor = const Color.fromARGB(255, 0, 0, 0);
+                Navigator.pop(context, selectedColor);
+              },
+            ),
+```
+
+
+### ✅ Bukti Praktikum 9
+![Praktikum 9](lib/assets/images/prak1.gif)
+
+---
