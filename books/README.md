@@ -137,3 +137,23 @@
 ![Praktikum 3.4](lib/assets/images/prak1.gif)
 
 ---
+
+## 📌 Praktikum 5 – Menangani Respon Error pada Async Code
+
+### 💡 Soal 1  
+**Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!**
+
+**🧠 Jawaban:**  
+
+- **`handleError`**  
+   Menangani error menggunakan try catch agar error tidak menyebabkan crash di program mengganti error dengan teks lain
+
+- **`returnError`**  
+   Kebalikan dari handleError jika dipakai pada aplikasi dan ada error maka aplikasi akan crash 
+
+---
+
+### ✅ Bukti Praktikum 5
+![Praktikum 5](lib/assets/images/prak1.gif)
+
+---
