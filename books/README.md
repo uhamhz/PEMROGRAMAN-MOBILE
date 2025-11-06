@@ -64,7 +64,7 @@
 ---
 
 ### ✅ Bukti Praktikum 1  
-![Praktikum 1](lib/assets/images/prak1.gif)
+![Praktikum 1](lib/assets/gif/prak1.gif)
 
 ---
 
@@ -84,7 +84,7 @@
 ---
 
 ### ✅ Bukti Praktikum 2  
-![Praktikum 2](lib/assets/images/prak1.gif)
+![Praktikum 2](lib/assets/gif/prak2.gif)
 
 ---
 
@@ -105,7 +105,7 @@
 ---
 
 ### ✅ Bukti Praktikum 3 Langkah 4
-![Praktikum 3.4](lib/assets/images/prak1.gif)
+![Praktikum 3.4](lib/assets/gif/prak3.gif)
 
 ### 💡 Soal 2  
 **Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!**
@@ -114,7 +114,7 @@
    logika method masih sama saja tetapi pada method yang sudah diperbarui memiliki try catch error yang dapat menampilkan pesan saat ada error 
 
 ### ✅ Bukti Praktikum 3
-![Praktikum 3](lib/assets/images/prak1.gif)
+![Praktikum 3](lib/assets/gif/prak3.gif)
 
 ---
 
@@ -134,7 +134,7 @@
 ---
 
 ### ✅ Bukti Praktikum 4
-![Praktikum 3.4](lib/assets/images/prak1.gif)
+![Praktikum 4](lib/assets/gif/prak4.gif)
 
 ---
 
@@ -154,7 +154,7 @@
 ---
 
 ### ✅ Bukti Praktikum 5
-![Praktikum 5](lib/assets/images/prak1.gif)
+![Praktikum 5](lib/assets/gif/prak5.gif)
 
 ---
 
@@ -185,7 +185,7 @@
 ---
 
 ### ✅ Bukti Praktikum 6
-![Praktikum 6](lib/assets/images/prak1.gif)
+![Praktikum 6](lib/assets/gif/prak6.gif)
 
 ---
 
@@ -198,7 +198,7 @@
   tidak ada perbedaan UI namun hasil UI saja yang berbeda seperti yang sebelumnya loading lebih cepat sekarang 3 detik (lebih lama) dan sekarang position null tidak ada titik kordinat
 
 ### ✅ Bukti Praktikum 7.1
-![Praktikum 7.1](lib/assets/images/prak1.gif)
+![Praktikum 7.1](lib/assets/gif/prak7.1.gif)
 
 ### 💡 Soal 2  
 **Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?**
@@ -207,7 +207,7 @@
   Perbedaan UI hanya pada handle error saja sekarang menampilkan pesan ke aplikasi bukan null saja
 
 ### ✅ Bukti Praktikum 7.2
-![Praktikum 7.2](lib/assets/images/prak1.gif)
+![Praktikum 7.2](lib/assets/gif/prak7.2.gif)
 
 ---
 
@@ -281,7 +281,7 @@ ElevatedButton(
 ```
 
 ### ✅ Bukti Praktikum 8
-![Praktikum 8](lib/assets/images/prak1.gif)
+![Praktikum 8](lib/assets/gif/prak8.gif)
 
 ---
 
@@ -323,6 +323,6 @@ ElevatedButton(
 
 
 ### ✅ Bukti Praktikum 9
-![Praktikum 9](lib/assets/images/prak1.gif)
+![Praktikum 9](lib/assets/gif/prak9.gif)
 
 ---
