@@ -164,32 +164,30 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
   }
 ```
 
-## 📌 Praktikum 3 – Menggunakan Completer di Future
+## 📌 Praktikum 3 – Injeksi data ke streams
 
-### 💡 Soal 1  
-**Jelaskan maksud kode langkah 2 tersebut!**
+### 💡 Soal 8  
+**Jelaskan maksud kode langkah 1-3 tersebut!**
 
 **🧠 Jawaban:**  
 
-- **`getNumber`**  
-   getNumber() langsung mengembalikan Future yang belum selesai.
-   Tapi 5 detik kemudian, Future itu akan selesai dan memberikan nilai 42.
+- **`Langkah 1`**  
+   Variabel ini digunakan untuk menyimpan logika transformasi data stream. StreamTransformer adalah objek di Dart yang berfungsi untuk memodifikasi data yang lewat di dalam stream, sebelum data diterima oleh listen(), data tersebut akan diubah terlebih dahulu oleh transformer sesuai logika yang kita buat nanti.
 
-- **`calculate`**  
-   Future yang dikembalikan oleh getNumber() sekarang dianggap selesai (completed), dengan hasil nilai 42.
+- **`Langkah 2`**  
+   StreamTransformer ini berfungsi sebagai filter atau pipa pengubah data/error sebelum data dikonsumsi oleh UI.
+
+- **`Langkah 3`**  
+   Nilai hasil transformasi diterima di listen() dan disimpan ke variabel lastNumber untuk ditampilkan di UI.
 
 ---
 
-### ✅ Bukti Praktikum 3 Langkah 4
-![Praktikum 3.4](lib/assets/gif/prak3.gif)
-
-### 💡 Soal 2  
-**Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!**
+### 💡 Soal 8.2  
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
 
 **🧠 Jawaban:**  
-   logika method masih sama saja tetapi pada method yang sudah diperbarui memiliki try catch error yang dapat menampilkan pesan saat ada error 
 
-### ✅ Bukti Praktikum 3
+### ✅ Bukti Praktikum 3  
 ![Praktikum 3](lib/assets/gif/prak3.gif)
 
 ---

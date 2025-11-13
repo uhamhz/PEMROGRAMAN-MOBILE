@@ -32,25 +32,45 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late ColorStream colorStream;
   int lastNumber = 0;
 
-  late StreamController numberStreamController;
+  late StreamController<int> numberStreamController;
   late NumberStream numberStream;
+  late StreamTransformer<int, int> transformer;
 
   @override
   void initState() {
+    super.initState();
+    colorStream = ColorStream();
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
+
+    // Initialize transformer BEFORE using it
+    transformer = StreamTransformer<int, int>.fromHandlers(
+      handleData: (value, sink) {
+        sink.add(value * 10);
+      },
+      handleError: (error, stackTrace, sink) {
+        sink.add(-1);
+      },
+      handleDone: (sink) => sink.close(),
+    );
+
+    final Stream<int> stream = numberStreamController.stream;
     stream
-        .listen((event) {
-          setState(() {
-            lastNumber = event;
-          });
-        })
-        .onError((error) {
-          setState(() {
-            lastNumber = -1;
-          });
-        });
+        .transform(transformer)
+        .listen(
+          (event) {
+            setState(() {
+              lastNumber = event;
+            });
+          },
+          onError: (error) {
+            setState(() {
+              lastNumber = -1;
+            });
+          },
+        );
+    // Optionally start background color changes
+    // changeColor();
   }
 
   void changeColor() async {
@@ -71,10 +91,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(lastNumber.toString()),
+            Text(lastNumber.toString(), style: const TextStyle(fontSize: 24)),
             ElevatedButton(
               onPressed: () => addRandomNumber(),
-              child: Text('New Random Number'),
+              child: const Text('New Random Number'),
             ),
           ],
         ),
