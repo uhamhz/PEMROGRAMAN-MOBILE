@@ -42,13 +42,25 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+---
 
-### 💡 Soal 2.2  
-**Kemudian cobalah akses di browser URI tersebut dengan lengkap seperti ini. Jika menampilkan data JSON, maka Anda telah berhasil.**
+### 💡 Soal 2  
+**Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.**
 
 **🧠 Jawaban:**  
-![Soal 2.2](lib/assets/images/soal3.png)
+```  
+import 'package:flutter/material.dart';
 
+class ColorStream{
+  final List<Color> colors = [
+    Colors.red,
+    Colors.blue,
+    Colors.yellow,
+    Colors.cyan,
+    Colors.teal,
+  ];
+}
+```
 ---
 
 ### 💡 Soal 3  
