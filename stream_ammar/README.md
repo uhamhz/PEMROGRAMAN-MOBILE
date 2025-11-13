@@ -245,36 +245,30 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 4 
+### ✅ Bukti Praktikum 5 
 ![Praktikum 5](lib/assets/gif/prak5.gif)
 
 ---
 
-## 📌 Praktikum 6 – Menggunakan Future dengan StatefulWidget
+## 📌 Praktikum 6 – StreamBuilder
 
-### 💡 Soal 1  
-**Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.**
-
-**🧠 Jawaban:**  
-```    Widget build(BuildContext context) {
-    final myWidget = myPosition == ''
-        ? const CircularProgressIndicator()
-        : Text(myPosition);
-
-    return Scaffold(
-      appBar: AppBar(title: const Text('Current Location - Ammar')),
-      body: Center(child: myWidget),
-    );
-  }
-
-```
-### 💡 Soal 2
-**Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?**
+### 💡 Soal 12  
+**Jelaskan maksud kode pada langkah 3 dan 7 !**
 
 **🧠 Jawaban:**  
-   Tetap mendapatkan kordinat GPS seperti di emulator karena web mengirimkan izin membagikan lokasi terkini terlebih dahulu dan lokasi baru ditampilkan dan terlebih ini flutter 1 code bisa dijalankan di berbagai platform
+
+- **`Langkah 3`**  
+   Menghasilkan aliran (Stream<int>) angka acak 0–9 setiap 1 detik, tanpa henti, Stream.periodic(Duration(seconds: 1), …) memanggil callback tiap detik. Parameter t adalah hitungan tick (0,1,2,…) namun tidak dipakai. Callback mengembalikan random.nextInt(10) yang menghasilkan angka 0–9.
+
+- **`Langkah 7`**  
+   Mendengarkan numberStream dan me-render ulang UI setiap kali stream mengirim nilai baru.
 
 ---
+
+### 💡 Soal 12.2
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 6
 ![Praktikum 6](lib/assets/gif/prak6.gif)
