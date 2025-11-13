@@ -64,17 +64,21 @@ class ColorStream{
 ---
 
 ### 💡 Soal 3  
-**Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!**
+**Jelaskan fungsi keyword yield* pada kode tersebut!**
 
 **🧠 Jawaban:**  
 
-- **`substring`**  
-  .substring(0, 450) → memotong teks tersebut mulai dari indeks ke-0 sampai ke-449, jadi hanya menampilkan 450 karakter pertama. Agar data yang ditampilkan ke layar tidak terlalu panjang (karena response JSON bisa sangat besar).
- Misalnya, kalau body berisi 10.000 karakter, hanya 450 karakter pertama yang diambil untuk pratinjau cepat.
+yield* berfungsi untuk meneruskan semua event dari Stream.periodic() ke dalam getColors(),
+sehingga setiap detik fungsi ini akan “memancarkan” warna baru ke subscriber yang mendengarkan stream tersebut.
 
-- **`catchError`**  
-  Menampilkan pesan 'An error occurred' agar pengguna tahu bahwa ada kegagalan saat memuat data.
- Pemanggilan setState() memastikan teks hasil (result) yang ditampilkan di UI ikut diperbarui.
+---
+
+### 💡 Soal 3.2  
+**Apa maksud isi perintah kode tersebut?**
+
+**🧠 Jawaban:**  
+
+Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah setiap 1 detik, dan terus berulang tanpa henti.
 
 ---
 
