@@ -82,8 +82,28 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
+### 💡 Soal 4  
+**Apa maksud isi perintah kode tersebut?**
+
+**🧠 Jawaban:**  
+
 ### ✅ Bukti Praktikum 1  
 ![Praktikum 1](lib/assets/gif/prak1.gif)
+
+---
+### 💡 Soal 5  
+**Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !**
+
+**🧠 Jawaban:**  
+
+- **`Listen`**  
+   Stream akan mengirimkan warna setiap detik, dan callback ini akan dipanggil setiap kali ada event baru.
+   Namun, kode setelah listen() langsung lanjut jalan tanpa menunggu semua event selesai.
+
+- **`Await`**  
+   program menunggu setiap event stream secara berurutan, baru lanjut ke iterasi berikutnya.
+   Biasanya dipakai di fungsi async ketika kamu ingin mengontrol urutan eksekusi atau menunggu sampai stream selesai sepenuhnya.
+
 
 ---
 
