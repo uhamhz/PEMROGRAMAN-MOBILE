@@ -192,22 +192,32 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
-## 📌 Praktikum 4 – Memanggil Future secara paralel
+## 📌 Praktikum 4 – Subscribe ke stream events
 
-### 💡 Soal 1  
-**Jelaskan maksud perbedaan kode langkah 1 dan 4!**
+### 💡 Soal 9  
+**Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!**
 
 **🧠 Jawaban:**  
 
-- **`FutureGroup`**  
-   Future group dipakai ketika kita ingin menambah future secara dinamis sebelum close dipanggil 
+- **`Langkah 2`**  
+   Kode ini menghubungkan aliran data (stream) dengan tampilan (UI) agar setiap angka baru yang dikirim ke stream langsung muncul di layar.
 
-- **`Future.wait`**  
-   Semua future dijalankan secara pararel atau semua method langsung berjalan bersamaan 
+- **`Langkah 6`**  
+   subscription.cancel() = berhenti mendengarkan data dari stream agar aman dan efisien.
+
+- **`Langkah 8`**  
+   Fungsi ini mencoba mengirim angka acak ke stream.
+   Kalau stream masih hidup maka kirim angka ke UI.
+   Kalau stream sudah mati maka tampilkan -1 di layar sebagai tanda error.
 
 ---
 
-### ✅ Bukti Praktikum 4
+### 💡 Soal 9.2  
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 4 
 ![Praktikum 4](lib/assets/gif/prak4.gif)
 
 ---
