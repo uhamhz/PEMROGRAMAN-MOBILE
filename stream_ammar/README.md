@@ -83,7 +83,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 ---
 
 ### 💡 Soal 4  
-**Apa maksud isi perintah kode tersebut?**
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
 
 **🧠 Jawaban:**  
 
@@ -107,23 +107,29 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
-## 📌 Praktikum 2 – Menggunakan await/async untuk menghindari callbacks
-
-### 💡 Soal 1  
-**Jelaskan maksud kode langkah 1 dan 2 tersebut!**
+## 📌 Praktikum 2 – Stream controllers dan sinks
+### 💡 Soal 6
+**Jelaskan maksud kode langkah 8 dan 10 tersebut!**
 
 **🧠 Jawaban:**  
 
-- **`Langkah Pertama`**  
-   Pada langkah pertama kita membuat tiga method asyncronus dan tiap method memiliki delay 3 detik tetapi memiliki nilai return yang berbeda beda 1,2 dan 3
+- **`initState()`**  
+   Kode initState() ini membuat stream listener yang selalu memantau data baru dari NumberStream.
+   Setiap kali ada angka baru dikirim ke stream, nilai lastNumber akan berubah dan UI diperbarui secara otomatis.
 
-- **`Langkah Kedua`**  
-   dan pada method count yang akan dipanggil saat user menekan tombol go dan pada method count dimulai dari var total yaitu 0 dan menunggu tiap method async return 1 2 3 terpanggil dengan waktu delay 9 detik dan nilai returnnya 6 yang akan ditampilkan pada ui 
+- **`addRandomNumber()`**  
+   Fungsi addRandomNumber() adalah pengirim data (input).
+   Fungsi ini men-generate angka acak dan mengirimkannya ke stream,
+   sementara initState() tadi adalah penerima data (listener) yang menampilkan hasilnya di UI.
 
 ---
+### 💡 Soal 6.2  
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 2  
-![Praktikum 2](lib/assets/gif/prak2.gif)
+![Praktikum 2](lib/assets/gif/prak1.gif)
 
 ---
 
