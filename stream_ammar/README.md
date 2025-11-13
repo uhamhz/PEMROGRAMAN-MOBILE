@@ -133,6 +133,37 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
+### 💡 Soal 7
+**Jelaskan maksud kode langkah 13 sampai 15 tersebut!**
+
+**🧠 Jawaban:**  
+
+- **`Langkah 13`**  
+   addError() digunakan untuk mensimulasikan kondisi error dalam aliran data stream.
+
+- **`Langkah 14`**  
+   stream.listen(...) digunakan untuk mendengarkan data baru yang dikirim ke stream.
+   bagian (event) berisi data hasil add() dari StreamController.
+
+- **`Langkah 15`**  
+   Dua baris pertama dikomentari karena tidak lagi mengirim data acak.
+   Diganti dengan pemanggilan numberStream.addError() yang dibuat pada langkah 13.
+
+---
+
+### 💡 Soal 7.2  
+**Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.**
+
+**🧠 Jawaban:**  
+```  
+  void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+    // numberStream.addError();
+  }
+```
+
 ## 📌 Praktikum 3 – Menggunakan Completer di Future
 
 ### 💡 Soal 1  

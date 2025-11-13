@@ -22,11 +22,15 @@ class ColorStream {
 class NumberStream {
   final StreamController<int> controller = StreamController<int>();
 
-  void addNumberToSink(int newNumber){
+  void addNumberToSink(int newNumber) {
     controller.sink.add(newNumber);
   }
 
-  close(){
+  addError() {
+    controller.sink.addError("Error");
+  }
+
+  close() {
     controller.close();
   }
 }
