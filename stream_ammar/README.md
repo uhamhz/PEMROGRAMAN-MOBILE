@@ -222,22 +222,30 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
-## 📌 Praktikum 5 – Menangani Respon Error pada Async Code
+## 📌 Praktikum 5 – Multiple stream subscriptions
 
-### 💡 Soal 1  
-**Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!**
+### 💡 Soal 10  
+**Jelaskan mengapa error itu bisa terjadi ?**
 
 **🧠 Jawaban:**  
-
-- **`handleError`**  
-   Menangani error menggunakan try catch agar error tidak menyebabkan crash di program mengganti error dengan teks lain
-
-- **`returnError`**  
-   Kebalikan dari handleError jika dipakai pada aplikasi dan ada error maka aplikasi akan crash 
+error itu muncul karena stream single-subscription sedang di-listen lebih dari sekali. Pastikan hanya satu listen aktif untuk stream tersebut, atau jadikan stream broadcast jika ingin multi-listener. Kalau kamu mau, aku bisa ubah NumberStream jadi broadcast atau migasi ke StreamBuilder untuk UI supaya tidak ada listen ganda secara tidak sengaja.
 
 ---
 
-### ✅ Bukti Praktikum 5
+### 💡 Soal 11 
+**Jelaskan mengapa hal itu bisa terjadi ?**
+
+**🧠 Jawaban:**  
+duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya menambah values.
+
+---
+
+### 💡 Soal 11.2  
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 4 
 ![Praktikum 5](lib/assets/gif/prak5.gif)
 
 ---
