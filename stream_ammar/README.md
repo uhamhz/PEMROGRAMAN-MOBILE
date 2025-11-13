@@ -275,140 +275,21 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 
 ---
 
-## 📌 Praktikum 7 – Manajemen Future dengan FutureBuilder
+## 📌 Praktikum 7 – BLoC Pattern
 
-### 💡 Soal 1  
-**Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?**
-
-**🧠 Jawaban:**  
-  tidak ada perbedaan UI namun hasil UI saja yang berbeda seperti yang sebelumnya loading lebih cepat sekarang 3 detik (lebih lama) dan sekarang position null tidak ada titik kordinat
-
-### ✅ Bukti Praktikum 7.1
-![Praktikum 7.1](lib/assets/gif/prak7.1.gif)
-
-### 💡 Soal 2  
-**Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?**
+### 💡 Soal 13  
+**Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?**
 
 **🧠 Jawaban:**  
-  Perbedaan UI hanya pada handle error saja sekarang menampilkan pesan ke aplikasi bukan null saja
+  UI (FAB ditekan) → event ke generateRandom → BLoC proses → state baru ke randomNumber → UI rebuild via StreamBuilder.
+  Struktur ini sudah memisahkan UI dari logic bisnis (inti BLoC), dengan arus data satu arah: event masuk, state keluar
 
-### ✅ Bukti Praktikum 7.2
-![Praktikum 7.2](lib/assets/gif/prak7.2.gif)
-
----
-
-## 📌 Praktikum 8 – Navigation route dengan Future Function
-
-### 💡 Soal 1  
-**Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.**
+### 💡 Soal 13.2
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
 
 **🧠 Jawaban:**  
-```     
-Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: color,
-      appBar: AppBar(title: const Text('Navigation First Screen - Ammar')),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Change Color'),
-          onPressed: () {
-            _navigateAndGetColor(context);
-          },
-        ),
-      ),
-    );
-  }
 
-```
-
-### 💡 Soal 2  
-**Silakan ganti dengan warna tema favorit Anda.**
-
-**🧠 Jawaban:**  
-```    
-class _NavigationFirstState extends     State<NavigationFirst> {
-  Color color = const Color.fromARGB(255, 159, 57, 255);
-
-```
-
-### 💡 Soal 3  
-**Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?**
-
-**🧠 Jawaban:**  
-   warna screen (background) akan berubah sesuai warna yang dipilih dan yang telah disediakan
-
-### 💡 Soal 4  
-**Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!**
-
-**🧠 Jawaban:**  
-```    
-ElevatedButton(
-              child: const Text('Green'),
-              onPressed: () {
-                color = const Color.fromARGB(255, 140, 217, 25);
-                Navigator.pop(context, color);
-              },
-            ),
-            ElevatedButton(
-              child: const Text('Blue'),
-              onPressed: () {
-                color = const Color.fromARGB(255, 67, 8, 229);
-                Navigator.pop(context, color);
-              },
-            ),
-            ElevatedButton(
-              child: const Text('Red'),
-              onPressed: () {
-                color = const Color.fromARGB(255, 180, 15, 15);
-                Navigator.pop(context, color);
-              },
-            ),
-
-```
-
-### ✅ Bukti Praktikum 8
-![Praktikum 8](lib/assets/gif/prak8.gif)
-
----
-
-## 📌 Praktikum 9 – Memanfaatkan async/await dengan Widget Dialog
-
-### 💡 Soal 1  
-**Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?**
-
-**🧠 Jawaban:**  
-  Masih ada error ui atau background tidak berganti warna dikarenakan variabel state tidak diperbarui meskipun memanggil setState({}) di akhir fungsi _showColorDialog, tidak memberi tahu setState nilai baru apa yang harus digunakan. variabel state color (this.color) tetap menggunakan nilai lamanya.
-
-### 💡 Soal 2  
-**Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!**
-
-**🧠 Jawaban:**  
-``` 
-  TextButton(
-              child: const Text('Pink'),
-              onPressed: () {
-                final selectedColor = const Color.fromARGB(255, 215, 48, 227);
-                Navigator.pop(context, selectedColor);
-              },
-            ),
-            TextButton(
-              child: const Text('Green'),
-              onPressed: () {
-                final selectedColor = const Color.fromARGB(255, 0, 128, 0);
-                Navigator.pop(context, selectedColor);
-              },
-            ),
-            TextButton(
-              child: const Text('Black'),
-              onPressed: () {
-                final selectedColor = const Color.fromARGB(255, 0, 0, 0);
-                Navigator.pop(context, selectedColor);
-              },
-            ),
-```
-
-
-### ✅ Bukti Praktikum 9
-![Praktikum 9](lib/assets/gif/prak9.gif)
+### ✅ Bukti Praktikum 7
+![Praktikum 7](lib/assets/gif/prak6.gif)
 
 ---
