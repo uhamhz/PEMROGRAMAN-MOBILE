@@ -129,7 +129,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 2  
-![Praktikum 2](lib/assets/gif/prak1.gif)
+![Praktikum 2](lib/assets/gif/prak2.gif)
 
 ---
 
