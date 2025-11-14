@@ -88,7 +88,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 1  
-![Praktikum 1](lib/assets/gif/prak1.gif)
+![Praktikum 1](lib/assets/gif/Prak1.gif)
 
 ---
 ### 💡 Soal 5  
@@ -129,7 +129,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 2  
-![Praktikum 2](lib/assets/gif/prak2.gif)
+![Praktikum 2](lib/assets/gif/Prak2.gif)
 
 ---
 
@@ -188,7 +188,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 3  
-![Praktikum 3](lib/assets/gif/prak3.gif)
+![Praktikum 3](lib/assets/gif/Prak3.gif)
 
 ---
 
@@ -218,7 +218,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 4 
-![Praktikum 4](lib/assets/gif/prak4.gif)
+![Praktikum 4](lib/assets/gif/Prak4.gif)
 
 ---
 
@@ -246,7 +246,7 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 5 
-![Praktikum 5](lib/assets/gif/prak5.gif)
+![Praktikum 5](lib/assets/gif/Prak5.gif)
 
 ---
 
@@ -271,7 +271,7 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 6
-![Praktikum 6](lib/assets/gif/prak6.gif)
+![Praktikum 6](lib/assets/gif/Prak6.gif)
 
 ### 🔎 Repository Repo Praktikum 6
 [Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12B/streambuilder_ammar)
@@ -293,7 +293,7 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 7
-![Praktikum 7](lib/assets/gif/prak6.gif)
+![Praktikum 7](lib/assets/gif/Prak6.gif)
 
 ### 🔎 Repository Repo Praktikum 7
 [Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12C/bloc_random_ammar)
