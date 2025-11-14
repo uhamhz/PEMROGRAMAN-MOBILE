@@ -273,6 +273,9 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 ### ✅ Bukti Praktikum 6
 ![Praktikum 6](lib/assets/gif/prak6.gif)
 
+### 🔎 Repository Repo Praktikum 6
+[Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12B/streambuilder_ammar)
+
 ---
 
 ## 📌 Praktikum 7 – BLoC Pattern
@@ -291,5 +294,8 @@ duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya mena
 
 ### ✅ Bukti Praktikum 7
 ![Praktikum 7](lib/assets/gif/prak6.gif)
+
+### 🔎 Repository Repo Praktikum 7
+[Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12C/bloc_random_ammar)
 
 ---
