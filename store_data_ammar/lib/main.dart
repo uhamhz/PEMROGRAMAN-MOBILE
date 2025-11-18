@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,11 +27,28 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String pizzaString = '';
+
+  @override
+  void initState() {
+    super.initState();
+    readJsonFile();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('JSON')),
-      body: Container(),
+      appBar: AppBar(title: const Text('JSON Demo - Ammar')),
+      body: Text(pizzaString),
     );
+  }
+
+  Future readJsonFile() async {
+    String myString = await DefaultAssetBundle.of(
+      context,
+    ).loadString('assets/pizzalist.json');
+    setState(() {
+      pizzaString = myString;
+    });
   }
 }

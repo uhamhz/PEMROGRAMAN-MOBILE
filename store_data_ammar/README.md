@@ -39,22 +39,14 @@ Widget build(BuildContext context) {
 ---
 
 ### 💡 Soal 2  
-**Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.**
+**Masukkan hasil capture layar ke laporan praktikum Anda.**
 
 **🧠 Jawaban:**  
-```  
-import 'package:flutter/material.dart';
 
-class ColorStream{
-  final List<Color> colors = [
-    Colors.red,
-    Colors.blue,
-    Colors.yellow,
-    Colors.cyan,
-    Colors.teal,
-  ];
-}
-```
+### ✅ Bukti Praktikum 1  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
+
+---
 ---
 
 ### 💡 Soal 3  
