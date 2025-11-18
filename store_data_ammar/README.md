@@ -47,15 +47,14 @@ Widget build(BuildContext context) {
 ![Praktikum 1](lib/assets/gif/Prak1.gif)
 
 ---
----
 
 ### 💡 Soal 3  
-**Jelaskan fungsi keyword yield* pada kode tersebut!**
+**Masukkan hasil capture layar ke laporan praktikum Anda.**
 
 **🧠 Jawaban:**  
 
-yield* berfungsi untuk meneruskan semua event dari Stream.periodic() ke dalam getColors(),
-sehingga setiap detik fungsi ini akan “memancarkan” warna baru ke subscriber yang mendengarkan stream tersebut.
+### ✅ Bukti Praktikum 1  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
 
 ---
 
