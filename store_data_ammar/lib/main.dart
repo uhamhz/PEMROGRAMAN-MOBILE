@@ -3,6 +3,7 @@ import './model/pizza.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'package:flutter/material.dart';
 
@@ -38,6 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String filePath = '';
   late File myFile;
   String fileText = '';
+  final pwdController = TextEditingController();
+  String myPass = '';
+  final storage = const FlutterSecureStorage();
+  final myKey = 'myPass';
 
   @override
   void initState() {
@@ -57,14 +62,26 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text('Doc Path: $documentsPath'),
-          Text('Temp Path: $filePath'),
-
+          TextField(controller: pwdController),
           ElevatedButton(
-            child: const Text('Read File'),
-            onPressed: () => readFile(),
+            child: const Text('Save Value'),
+            onPressed: () {
+              writeToSecureStorage();
+            },
           ),
-          Text(fileText),
+          ElevatedButton(
+            child: const Text('Read Value'),
+            onPressed: () {
+              readFromSecureStorage().then((value) {
+                setState(() {
+                  myPass = value ?? '';
+                });
+              });
+            },
+          ),
+          myPass.isNotEmpty
+              ? Text(myPass, style: const TextStyle(fontSize: 16))
+              : const SizedBox.shrink(),
         ],
       ),
     );
@@ -136,5 +153,14 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (e) {
       return false;
     }
+  }
+
+  Future writeToSecureStorage() async {
+    await storage.write(key: myKey, value: pwdController.text);
+  }
+
+  Future<String?> readFromSecureStorage() async {
+    String secret = await storage.read(key: myKey) ?? '';
+    return secret;
   }
 }

@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 1  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+![Soal 2](lib/assets/images/Soal2.png)
 
 ---
 
@@ -53,8 +53,8 @@ Widget build(BuildContext context) {
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 1  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+### ✅ Bukti Praktikum 2 
+![Soal 3](lib/assets/images/Soal3.png)
 
 ---
 
@@ -72,8 +72,8 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 1  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+### ✅ Bukti Praktikum 2.1  
+![Soal 4](lib/assets/images/Soal4.gif)
 
 ---
 ### 💡 Soal 5  
@@ -92,7 +92,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 3  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+![Soal 5.2](lib/assets/images/Soal5.gif)
 
 ---
 
@@ -112,7 +112,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 5  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+![Soal 7](lib/assets/images/Soal7.png)
 
 ---
 
@@ -139,199 +139,16 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 6  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+![Soal 8.1](lib/assets/images/Soal8.gif)
 
 ---
 
-## 📌 Praktikum 2 – Stream controllers dan sinks
-### 💡 Soal 6
-**Jelaskan maksud kode langkah 8 dan 10 tersebut!**
-
-**🧠 Jawaban:**  
-
-- **`initState()`**  
-   Kode initState() ini membuat stream listener yang selalu memantau data baru dari NumberStream.
-   Setiap kali ada angka baru dikirim ke stream, nilai lastNumber akan berubah dan UI diperbarui secara otomatis.
-
-- **`addRandomNumber()`**  
-   Fungsi addRandomNumber() adalah pengirim data (input).
-   Fungsi ini men-generate angka acak dan mengirimkannya ke stream,
-   sementara initState() tadi adalah penerima data (listener) yang menampilkan hasilnya di UI.
-
----
-### 💡 Soal 6.2  
+### 💡 Soal 9
 **Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 2  
-![Praktikum 2](lib/assets/gif/Prak2.gif)
-
----
-
-### 💡 Soal 7
-**Jelaskan maksud kode langkah 13 sampai 15 tersebut!**
-
-**🧠 Jawaban:**  
-
-- **`Langkah 13`**  
-   addError() digunakan untuk mensimulasikan kondisi error dalam aliran data stream.
-
-- **`Langkah 14`**  
-   stream.listen(...) digunakan untuk mendengarkan data baru yang dikirim ke stream.
-   bagian (event) berisi data hasil add() dari StreamController.
-
-- **`Langkah 15`**  
-   Dua baris pertama dikomentari karena tidak lagi mengirim data acak.
-   Diganti dengan pemanggilan numberStream.addError() yang dibuat pada langkah 13.
-
----
-
-### 💡 Soal 7.2  
-**Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.**
-
-**🧠 Jawaban:**  
-```  
-  void addRandomNumber() {
-    Random random = Random();
-    int myNum = random.nextInt(10);
-    numberStream.addNumberToSink(myNum);
-    // numberStream.addError();
-  }
-```
-
-## 📌 Praktikum 3 – Injeksi data ke streams
-
-### 💡 Soal 8  
-**Jelaskan maksud kode langkah 1-3 tersebut!**
-
-**🧠 Jawaban:**  
-
-- **`Langkah 1`**  
-   Variabel ini digunakan untuk menyimpan logika transformasi data stream. StreamTransformer adalah objek di Dart yang berfungsi untuk memodifikasi data yang lewat di dalam stream, sebelum data diterima oleh listen(), data tersebut akan diubah terlebih dahulu oleh transformer sesuai logika yang kita buat nanti.
-
-- **`Langkah 2`**  
-   StreamTransformer ini berfungsi sebagai filter atau pipa pengubah data/error sebelum data dikonsumsi oleh UI.
-
-- **`Langkah 3`**  
-   Nilai hasil transformasi diterima di listen() dan disimpan ke variabel lastNumber untuk ditampilkan di UI.
-
----
-
-### 💡 Soal 8.2  
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
-
-**🧠 Jawaban:**  
-
-### ✅ Bukti Praktikum 3  
-![Praktikum 3](lib/assets/gif/Prak3.gif)
-
----
-
-## 📌 Praktikum 4 – Subscribe ke stream events
-
-### 💡 Soal 9  
-**Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!**
-
-**🧠 Jawaban:**  
-
-- **`Langkah 2`**  
-   Kode ini menghubungkan aliran data (stream) dengan tampilan (UI) agar setiap angka baru yang dikirim ke stream langsung muncul di layar.
-
-- **`Langkah 6`**  
-   subscription.cancel() = berhenti mendengarkan data dari stream agar aman dan efisien.
-
-- **`Langkah 8`**  
-   Fungsi ini mencoba mengirim angka acak ke stream.
-   Kalau stream masih hidup maka kirim angka ke UI.
-   Kalau stream sudah mati maka tampilkan -1 di layar sebagai tanda error.
-
----
-
-### 💡 Soal 9.2  
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
-
-**🧠 Jawaban:**  
-
-### ✅ Bukti Praktikum 4 
-![Praktikum 4](lib/assets/gif/Prak4.gif)
-
----
-
-## 📌 Praktikum 5 – Multiple stream subscriptions
-
-### 💡 Soal 10  
-**Jelaskan mengapa error itu bisa terjadi ?**
-
-**🧠 Jawaban:**  
-error itu muncul karena stream single-subscription sedang di-listen lebih dari sekali. Pastikan hanya satu listen aktif untuk stream tersebut, atau jadikan stream broadcast jika ingin multi-listener. Kalau kamu mau, aku bisa ubah NumberStream jadi broadcast atau migasi ke StreamBuilder untuk UI supaya tidak ada listen ganda secara tidak sengaja.
-
----
-
-### 💡 Soal 11 
-**Jelaskan mengapa hal itu bisa terjadi ?**
-
-**🧠 Jawaban:**  
-duplikasi terjadi karena ada dua listen pada stream yang sama, dan keduanya menambah values.
-
----
-
-### 💡 Soal 11.2  
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
-
-**🧠 Jawaban:**  
-
-### ✅ Bukti Praktikum 5 
-![Praktikum 5](lib/assets/gif/Prak5.gif)
-
----
-
-## 📌 Praktikum 6 – StreamBuilder
-
-### 💡 Soal 12  
-**Jelaskan maksud kode pada langkah 3 dan 7 !**
-
-**🧠 Jawaban:**  
-
-- **`Langkah 3`**  
-   Menghasilkan aliran (Stream<int>) angka acak 0–9 setiap 1 detik, tanpa henti, Stream.periodic(Duration(seconds: 1), …) memanggil callback tiap detik. Parameter t adalah hitungan tick (0,1,2,…) namun tidak dipakai. Callback mengembalikan random.nextInt(10) yang menghasilkan angka 0–9.
-
-- **`Langkah 7`**  
-   Mendengarkan numberStream dan me-render ulang UI setiap kali stream mengirim nilai baru.
-
----
-
-### 💡 Soal 12.2
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
-
-**🧠 Jawaban:**  
-
-### ✅ Bukti Praktikum 6
-![Praktikum 6](lib/assets/gif/Prak6.gif)
-
-### 🔎 Repository Repo Praktikum 6
-[Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12B/streambuilder_ammar)
-
----
-
-## 📌 Praktikum 7 – BLoC Pattern
-
-### 💡 Soal 13  
-**Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?**
-
-**🧠 Jawaban:**  
-  UI (FAB ditekan) → event ke generateRandom → BLoC proses → state baru ke randomNumber → UI rebuild via StreamBuilder.
-  Struktur ini sudah memisahkan UI dari logic bisnis (inti BLoC), dengan arus data satu arah: event masuk, state keluar
-
-### 💡 Soal 13.2
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
-
-**🧠 Jawaban:**  
-
-### ✅ Bukti Praktikum 7
-![Praktikum 7](lib/assets/gif/Prak6.gif)
-
-### 🔎 Repository Repo Praktikum 7
-[Link Repository](https://github.com/uhamhz/PEMROGRAMAN-MOBILE/tree/Codelab12C/bloc_random_ammar)
+### ✅ Bukti Praktikum 7  
+![Soal 9](lib/assets/images/Soal9.gif)
 
 ---
