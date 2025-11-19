@@ -77,18 +77,22 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 ### 💡 Soal 5  
-**Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !**
+**Jelaskan maksud kode lebih safe dan maintainable!**
 
 **🧠 Jawaban:**  
 
-- **`Listen`**  
-   Stream akan mengirimkan warna setiap detik, dan callback ini akan dipanggil setiap kali ada event baru.
-   Namun, kode setelah listen() langsung lanjut jalan tanpa menunggu semua event selesai.
+- **`Konstanta Key JSON`**  
+   Pendekatan ini membuat kode lebih mudah dirawat, karena jika suatu saat API mengubah nama field, developer hanya perlu mengganti di satu tempat, bukan di seluruh class. Selain itu, penggunaan konstanta mengurangi risiko kesalahan penulisan (typo).
 
-- **`Await`**  
-   program menunggu setiap event stream secara berurutan, baru lanjut ke iterasi berikutnya.
-   Biasanya dipakai di fungsi async ketika kamu ingin mengontrol urutan eksekusi atau menunggu sampai stream selesai sepenuhnya.
+---
 
+### 💡 Soal 5.2  
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 3  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
 
 ---
 
