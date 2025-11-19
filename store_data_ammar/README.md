@@ -116,6 +116,33 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
+### 💡 Soal 8
+**Jelaskan maksud kode pada langkah 3 dan 5 !**
+
+**🧠 Jawaban:**  
+
+- **`Langkah 3`**  
+   Fungsi writeFile() digunakan untuk melakukan proses penyimpanan data ke dalam sebuah file secara asynchronous. Di dalam fungsi ini, aplikasi mencoba menuliskan sebuah teks berupa daftar nama pizza ke dalam file yang telah ditentukan sebelumnya. Proses penulisan dilakukan menggunakan metode writeAsString(), yang secara otomatis membuat file jika belum ada atau menimpa isinya jika sudah ada.
+
+   Untuk menjaga agar aplikasi tetap stabil, fungsi ini dibungkus di dalam blok try–catch. Jika proses penulisan berhasil, fungsi akan mengembalikan nilai true. Sebaliknya, jika terjadi kesalahan—misalnya file tidak dapat diakses atau penyimpanan gagal—fungsi akan menangkap error tersebut dan mengembalikan false. Dengan cara ini, fungsi writeFile() memastikan proses penulisan data ke file berjalan dengan aman tanpa membuat aplikasi berhenti secara tiba-tiba.
+
+- **`Langkah 5`**  
+   Fungsi readFile() berfungsi untuk mengambil kembali isi data yang telah disimpan dalam file. Proses pembacaan file dilakukan menggunakan readAsString(), yang mengembalikan seluruh isi file dalam bentuk string. Setelah berhasil dibaca, isi file tersebut disimpan ke dalam variabel state fileText melalui setState(), sehingga tampilan aplikasi akan diperbarui dan pengguna dapat melihat isi file secara langsung pada UI.
+
+   Sama seperti fungsi sebelumnya, readFile() juga menggunakan blok try–catch untuk mencegah aplikasi mengalami error saat membaca file. Jika pembacaan berhasil, fungsi mengembalikan nilai true; tetapi jika file tidak ditemukan atau terjadi kesalahan lain, fungsi akan mengembalikan false. Dengan demikian, fungsi ini memastikan bahwa proses membaca file dilakukan dengan aman sekaligus memperbarui tampilan aplikasi.
+
+---
+
+### 💡 Soal 8.1
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 6  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
+
+---
+
 ## 📌 Praktikum 2 – Stream controllers dan sinks
 ### 💡 Soal 6
 **Jelaskan maksud kode langkah 8 dan 10 tersebut!**

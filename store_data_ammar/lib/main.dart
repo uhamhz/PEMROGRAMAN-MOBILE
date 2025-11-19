@@ -2,6 +2,7 @@ import 'dart:convert';
 import './model/pizza.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 
@@ -35,16 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
   int appCounter = 0;
   String documentsPath = '';
   String filePath = '';
+  late File myFile;
+  String fileText = '';
 
   @override
   void initState() {
-    super.initState();
-    getPath();
-    readJsonFile().then((value) {
+    getPath().then((_) {
       setState(() {
-        appCounter = appCounter;
+        myFile = File('$documentsPath/myfile.txt');
+        writeFile();
       });
     });
+    super.initState();
   }
 
   @override
@@ -56,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Text('Doc Path: $documentsPath'),
           Text('Temp Path: $filePath'),
+
+          ElevatedButton(
+            child: const Text('Read File'),
+            onPressed: () => readFile(),
+          ),
+          Text(fileText),
         ],
       ),
     );
@@ -106,5 +115,26 @@ class _MyHomePageState extends State<MyHomePage> {
       documentsPath = docDir.path;
       filePath = tempDir.path;
     });
+  }
+
+  Future<bool> writeFile() async {
+    try {
+      await myFile.writeAsString('Muhammad Ammar Hafizh, 2341720074');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<bool> readFile() async {
+    try {
+      String fileContent = await myFile.readAsString();
+      setState(() {
+        fileText = fileContent;
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 }
