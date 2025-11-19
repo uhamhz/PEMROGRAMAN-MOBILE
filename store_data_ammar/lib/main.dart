@@ -1,5 +1,7 @@
 import 'dart:convert';
 import './model/pizza.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'package:flutter/material.dart';
 
@@ -30,13 +32,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String pizzaString = '';
   List<Pizza> myPizzas = [];
+  int appCounter = 0;
+  String documentsPath = '';
+  String filePath = '';
 
   @override
   void initState() {
     super.initState();
+    getPath();
     readJsonFile().then((value) {
       setState(() {
-        myPizzas = value;
+        appCounter = appCounter;
       });
     });
   }
@@ -44,17 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('JSON Demo - Ammar')),
-      body: ListView.builder(
-        itemCount: myPizzas.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(myPizzas[index].pizzaName),
-            subtitle: Text(
-              '${myPizzas[index].description} - \$${myPizzas[index].price}',
-            ),
-          );
-        },
+      appBar: AppBar(title: const Text('Path Provider - Ammar')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text('Doc Path: $documentsPath'),
+          Text('Temp Path: $filePath'),
+        ],
       ),
     );
   }
@@ -79,5 +81,30 @@ class _MyHomePageState extends State<MyHomePage> {
 
   String convertToJson(List<Pizza> pizzas) {
     return jsonEncode(pizzas.map((pizza) => jsonEncode(pizza)).toList());
+  }
+
+  Future readAndWritePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    appCounter = prefs.getInt('appCounter') ?? 0;
+    appCounter++;
+
+    await prefs.setInt('appCounter', appCounter);
+  }
+
+  Future deletePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    setState(() {
+      appCounter = 0;
+    });
+  }
+
+  Future getPath() async {
+    final docDir = await getApplicationDocumentsDirectory();
+    final tempDir = await getTemporaryDirectory();
+    setState(() {
+      documentsPath = docDir.path;
+      filePath = tempDir.path;
+    });
   }
 }

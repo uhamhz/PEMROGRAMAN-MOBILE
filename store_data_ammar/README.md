@@ -96,6 +96,26 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 
 ---
 
+### 💡 Soal 6
+**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 4  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
+
+---
+
+### 💡 Soal 7
+**Capture hasil praktikum Anda dan lampirkan di README.**
+
+**🧠 Jawaban:**  
+
+### ✅ Bukti Praktikum 5  
+![Praktikum 1](lib/assets/gif/Prak1.gif)
+
+---
+
 ## 📌 Praktikum 2 – Stream controllers dan sinks
 ### 💡 Soal 6
 **Jelaskan maksud kode langkah 8 dan 10 tersebut!**
