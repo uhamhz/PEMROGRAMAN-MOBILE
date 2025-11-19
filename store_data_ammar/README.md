@@ -102,7 +102,7 @@ Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah 
 **🧠 Jawaban:**  
 
 ### ✅ Bukti Praktikum 4  
-![Praktikum 1](lib/assets/gif/Prak1.gif)
+![Soal 6](lib/assets/images/Soal6.gif)
 
 ---
 
