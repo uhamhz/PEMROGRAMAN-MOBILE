@@ -21,4 +21,19 @@ class HttpHelper {
       return [];
     }
   }
+
+  static final HttpHelper _httpHelper = HttpHelper._internal();
+  HttpHelper._internal();
+  factory HttpHelper() {
+    return _httpHelper;
+  }
+
+  Future<String> postPizza(Pizza pizza) async {
+    const postPath = 'pizza';
+    String post = json.encode(pizza.toJson());
+    Uri url = Uri.https(authority, postPath);
+    final headers = {'Content-Type': 'application/json'};
+    http.Response r = await http.post(url, headers: headers, body: post);
+    return r.body;
+  }
 }

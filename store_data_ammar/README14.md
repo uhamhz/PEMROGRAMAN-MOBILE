@@ -43,23 +43,31 @@ Widget build(BuildContext context) {
 ![Soal 1](lib/assets/images/Soal2.png)
 
 ---
+## 📌 Praktikum 2 – Mengirim Data ke Web Service (POST)
 
-### 💡 Soal 3  
-**Masukkan hasil capture layar ke laporan praktikum Anda.**
+### 💡 Soal 2  
+**Tambahkan field baru dalam JSON maupun POST ke Wiremock!**
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 2 
-![Soal 3](lib/assets/images/Soal3.png)
+```  
+const keyId = 'id';
+const keyName = 'pizzaName';
+const keyDescription = 'description';
+const keyPrice = 'price';
+const keyImage = 'imageUrl';
+const keyCategory = 'category'; #BARU
+```
 
 ---
 
-### 💡 Soal 3.2  
-**Apa maksud isi perintah kode tersebut?**
+### 💡 Soal 2.2  
+**Capture hasil aplikasi Anda berupa GIF di README**
 
 **🧠 Jawaban:**  
 
-Kode tersebut membuat stream yang memancarkan warna dari daftar colors, berubah setiap 1 detik, dan terus berulang tanpa henti.
+### ✅ Bukti Praktikum 2  
+![Soal 2](lib/assets/images/Soal2.gif)
 
 ---
 

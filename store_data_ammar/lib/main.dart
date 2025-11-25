@@ -5,6 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import './httphelper.dart';
+import './pizza_detail.dart';
 
 import 'package:flutter/material.dart';
 
@@ -59,6 +60,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const PizzaDetailScreen()),
+          );
+        },
+      ),
       appBar: AppBar(title: const Text('JSON and HTTP Demo - Ammar')),
       body: FutureBuilder(
         future: callPizzas(),
