@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import './httphelper.dart';
 
 import 'package:flutter/material.dart';
 
@@ -58,31 +59,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Path Provider - Ammar')),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          TextField(controller: pwdController),
-          ElevatedButton(
-            child: const Text('Save Value'),
-            onPressed: () {
-              writeToSecureStorage();
+      appBar: AppBar(title: const Text('JSON and HTTP Demo - Ammar')),
+      body: FutureBuilder(
+        future: callPizzas(),
+        builder: (BuildContext context, AsyncSnapshot<List<Pizza>> snapshot) {
+          if (snapshot.hasError) {
+            return const Text('Something went wrong');
+          }
+          if (!snapshot.hasData) {
+            return const CircularProgressIndicator();
+          }
+          return ListView.builder(
+            itemCount: (snapshot.data == null) ? 0 : snapshot.data!.length,
+            itemBuilder: (BuildContext context, int position) {
+              return ListTile(
+                title: Text(snapshot.data![position].pizzaName),
+                subtitle: Text(
+                  '${snapshot.data![position].description} - € ${snapshot.data![position].price}',
+                ),
+              );
             },
-          ),
-          ElevatedButton(
-            child: const Text('Read Value'),
-            onPressed: () {
-              readFromSecureStorage().then((value) {
-                setState(() {
-                  myPass = value ?? '';
-                });
-              });
-            },
-          ),
-          myPass.isNotEmpty
-              ? Text(myPass, style: const TextStyle(fontSize: 16))
-              : const SizedBox.shrink(),
-        ],
+          );
+        },
       ),
     );
   }
@@ -162,5 +160,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<String?> readFromSecureStorage() async {
     String secret = await storage.read(key: myKey) ?? '';
     return secret;
+  }
+
+  Future<List<Pizza>> callPizzas() async {
+    HttpHelper helper = HttpHelper();
+    List<Pizza> pizzas = await helper.getPizzaList();
+    return pizzas;
   }
 }
