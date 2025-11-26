@@ -3,7 +3,14 @@ import './model/pizza.dart';
 import './httphelper.dart';
 
 class PizzaDetailScreen extends StatefulWidget {
-  const PizzaDetailScreen({super.key});
+  final Pizza pizza;
+  final bool isNew;
+  const PizzaDetailScreen({
+    super.key,
+    required this.pizza,
+    required this.isNew,
+  });
+
   @override
   State<PizzaDetailScreen> createState() => _PizzaDetailScreenState();
 }
@@ -16,6 +23,18 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
   final TextEditingController txtImageUrl = TextEditingController();
   final TextEditingController txtCategory = TextEditingController();
   String operationResult = '';
+
+  @override
+  void initState() {
+    if (!widget.isNew) {
+      txtId.text = widget.pizza.id.toString();
+      txtName.text = widget.pizza.pizzaName;
+      txtDescription.text = widget.pizza.description;
+      txtPrice.text = widget.pizza.price.toString();
+      txtImageUrl.text = widget.pizza.imageUrl;
+    }
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -103,6 +122,24 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
       category: txtCategory.text,
     );
     String result = await helper.postPizza(pizza);
+    setState(() {
+      operationResult = result;
+    });
+  }
+
+  Future savePizza() async {
+    HttpHelper helper = HttpHelper();
+    Pizza pizza = Pizza(
+      id: int.tryParse(txtId.text) ?? 0,
+      pizzaName: txtName.text,
+      description: txtDescription.text,
+      price: double.tryParse(txtPrice.text) ?? 0.0,
+      imageUrl: txtImageUrl.text,
+      category: txtCategory.text,
+    );
+    final result = await (widget.isNew
+        ? helper.postPizza(pizza)
+        : helper.putPizza(pizza));
     setState(() {
       operationResult = result;
     });

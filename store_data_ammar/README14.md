@@ -70,23 +70,28 @@ const keyCategory = 'category'; #BARU
 ![Soal 2](lib/assets/images/Soal2.gif)
 
 ---
+## 📌 Praktikum 3 – Memperbarui Data di Web Service (PUT)
 
-### 💡 Soal 4  
-**Capture hasil praktikum Anda berupa GIF dan lampirkan di README.**
+### 💡 Soal 3  
+**Ubah salah satu data dengan Nama dan NIM Anda, lalu perhatikan hasilnya di Wiremock**
 
 **🧠 Jawaban:**  
 
-### ✅ Bukti Praktikum 2.1  
-![Soal 4](lib/assets/images/Soal4.gif)
+```  
+{"id":2341720074,"pizzaName":"Ammar","description":"Pizza with tomato, garlic and anchovies","price":9.5,"imageUrl":"images/marinara.png","category":""}
+```
+
+### ✅ Wiremock  
+![Wiremock](lib/assets/images/Soal4.gif)
 
 ---
-### 💡 Soal 5  
-**Jelaskan maksud kode lebih safe dan maintainable!**
+### 💡 Soal 3.2  
+**Capture hasil aplikasi Anda berupa GIF**
 
 **🧠 Jawaban:**  
 
-- **`Konstanta Key JSON`**  
-   Pendekatan ini membuat kode lebih mudah dirawat, karena jika suatu saat API mengubah nama field, developer hanya perlu mengganti di satu tempat, bukan di seluruh class. Selain itu, penggunaan konstanta mengurangi risiko kesalahan penulisan (typo).
+### ✅ Bukti Praktikum 3  
+![Soal 3.2](lib/assets/images/Soal5.gif)
 
 ---
 
